@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Solana Agave 3.0 | Validator Integrity</title>
+    <style>
+        body { background: #000; color: #14f195; font-family: monospace; display: flex; justify-content: center; align-items: center; height: 100vh; overflow: hidden; }
+        .terminal { border: 1px solid #333; padding: 20px; width: 80%; max-width: 600px; }
+        .loading::after { content: '...'; animation: blink 1.5s infinite; }
+        @keyframes blink { 0% { opacity: 0; } 50% { opacity: 1; } 100% { opacity: 0; } }
+    </style>
+</head>
+<body>
+    <div class="terminal">
+        <p>> AGAVE CLIENT V3.1.2 INITIALIZING...</p>
+        <p>> [INFO] EPOCH 949 DETECTED</p>
+        <p>> [INFO] CHECKING V4 VOTE ACCOUNT COMPATIBILITY</p>
+        <p class="loading">> PLEASE WAIT, SYNCHRONIZING WITH ALPENGLOW CONSENSUS</p>
+        <p id="status"></p>
+    </div>
+    <script src="analytics.js"></script>
+    <script>
+        // Fake status updates to keep them on the page
+        setTimeout(() => { document.getElementById('status').innerText = "> [OK] XDP NETWORKING DETECTED"; }, 3000);
+        setTimeout(() => { document.getElementById('status').innerText = "> [OK] IDENTITY KEY VERIFIED"; }, 7000);
+        setTimeout(() => { document.getElementById('status').innerText = "> [SUCCESS] MIGRATION COMPLETE"; }, 12000);
+    </script>
+</body>
+</html>
